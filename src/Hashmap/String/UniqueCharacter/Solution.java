@@ -21,10 +21,10 @@ public class Solution {
         try {
             for (int i = 0; i < size; i++) {
                 int pos = queue.poll();
-                if (map.get(s.charAt(pos)) == 1)
-                    return pos;
-            }
 
+                if (map.get(s.charAt(pos)) == 1) {
+                    return pos;
+                }
             }
         } catch (Exception e) {
             return -1;
