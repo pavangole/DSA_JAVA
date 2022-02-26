@@ -1,6 +1,7 @@
 package Linkedlist.Singly;
 
-import java.util.LinkedList;
+
+
 
 class List {
 

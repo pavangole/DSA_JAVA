@@ -1,8 +1,6 @@
 package Tree.Array;
 
-import sun.awt.X11.XSizeHints;
 
-import java.util.ArrayList;
 
 public class Binary {
     public static void main(String[] args) {
