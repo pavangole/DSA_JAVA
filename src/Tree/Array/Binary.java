@@ -1,6 +1,5 @@
 package Tree.Array;
 
-import sun.awt.X11.XSizeHints;
 
 import java.util.ArrayList;
 
