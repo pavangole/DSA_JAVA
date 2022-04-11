@@ -4,7 +4,7 @@ import java.util.List;
 
 class  Solution {
 
-    public List sequentialDigits(int low, int high) {
+    public List<Integer> sequentialDigits(int low, int high) {
         System.out.println("Low is  :- " + low);
         System.out.println("High is :- " + high);
         int count = 1;
@@ -13,7 +13,6 @@ class  Solution {
             num = num / 10;
             count = count * 10;
         }
-        int fristdigit = num / count;
         int tmp = count;
         int number  = 0;
         while(tmp != 0) {
