@@ -1,4 +1,4 @@
-package Array.mergeInt;
+package src.Array.mergeInt;
 
 public enum Arraylist {
 

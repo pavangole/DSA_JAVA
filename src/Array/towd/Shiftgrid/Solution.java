@@ -1,4 +1,4 @@
-package Array.towd.Shiftgrid;
+package src.Array.towd.Shiftgrid;
 
 import java.util.ArrayList;
 import java.util.Arrays;
