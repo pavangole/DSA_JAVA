@@ -22,4 +22,8 @@ public class Solution {
     public TreeNode trimBST(TreeNode root, int low, int high) {
         return TreeNode;
     }   
+
+    public static void main(String[] args) {
+        
+    }
 }
