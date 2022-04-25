@@ -1,4 +1,4 @@
-package Queue.Circular;
+package src.Queue.Circular;
 
 public class MyCircularDeque {
     public MyCircularDeque(int k) {
