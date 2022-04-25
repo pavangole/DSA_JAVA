@@ -7,7 +7,6 @@ public class Solution {
 
         if (arr.get(arr.size() - 1) != 9) {
             arr.set(arr.size() - 1, arr.get(arr.size() - 1) + 1);
-            System.out.println(arr);
             return arr;
         }
 
@@ -28,12 +27,14 @@ public class Solution {
                     }
                 }
             }
+            if (!previous) {
+                break;
+            }
 
         }
         if(previous) {
             arr.add(0, 1);
         }
-        System.out.println(arr);
         return arr;
     }
 
