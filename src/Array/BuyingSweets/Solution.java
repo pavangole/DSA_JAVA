@@ -29,7 +29,18 @@ class Compare {
             }
         });
 
-        
+    }
+
+    static void compare2(Pair arr[]) {
+        // Comparator to sort the pair according to second element
+        Arrays.sort(arr, new Comparator<Pair>() {
+            @Override
+            public int compare(Pair p1, Pair p2) {
+                return p1.y - p2.y; // To compare the first element just
+                                    // change the variable from p1.y - p2.y to x.
+            }
+        });
+
     }
 }
 
@@ -87,8 +98,31 @@ public class Solution {
     }
 
     int buysweets(int rupees, int nuofsweets, Pair[] swadesh) {
+        boolean isallsame = false;
+        for (int i = 0; i < swadesh.length - 1; i++) {
+            if (swadesh[i].y == swadesh[i + 1].y) {
+                isallsame = true;
+            }
 
-        
+            else {
+                isallsame = false;
+            }
+        }
+
+        if (isallsame) {
+            Compare.compare2(swadesh);
+            int canbuy = 0;
+
+            for (int i = 0; i < nuofsweets; i++) {
+                while (rupees >= swadesh[i].x) {
+                    canbuy += 1;
+                    rupees = (rupees - swadesh[i].x) + swadesh[i].y;
+                }
+            }
+
+            return canbuy;
+        }
+
         Compare.compare(swadesh);
 
         int canbuy = 0;
@@ -96,7 +130,7 @@ public class Solution {
         for (int i = nuofsweets - 1; i >= 0; i--) {
             while (rupees >= swadesh[i].x) {
                 canbuy += 1;
-                rupees = (rupees - swadesh[i].x ) + swadesh[i].y;
+                rupees = (rupees - swadesh[i].x) + swadesh[i].y;
             }
         }
 
