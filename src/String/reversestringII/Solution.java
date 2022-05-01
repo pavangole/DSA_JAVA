@@ -7,14 +7,11 @@ public class Solution {
     public String reverseStr(String s, int k) {
         char[] orignal = s.toCharArray();
         char[] result = new char[s.length()];
-        int tok = k * 2 - 1;
-        
-        k = k -1;
         
         for (int i = 0; i < s.length() ;) {
             int h = i;
-            int t = k + i;
-            while ( h !=  t && h < t ) {
+            int t = Math.min(i + k - 1,s.length() -1 );
+            while (  h < t ) {
                 char temp = orignal[h];
                 orignal[h] = orignal[t];
                 orignal[t] = temp;
@@ -22,6 +19,7 @@ public class Solution {
                 t--;
 
             }
+            i += 2 * k;
         }
         
         
