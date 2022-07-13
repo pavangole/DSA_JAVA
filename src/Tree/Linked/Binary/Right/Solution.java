@@ -39,9 +39,9 @@ public class Solution {
         if (list.size() == level) {
             list.add(root.val);
         }
-
-        printRightView(root.right, list, level + 1);
         printRightView(root.left, list, level + 1);
+        printRightView(root.right, list, level + 1);
+        
     }
 
     public static void main(String[] args) {
