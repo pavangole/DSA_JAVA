@@ -36,7 +36,9 @@ public class Solution {
         Deque<TreeNode> store = new LinkedList<TreeNode>();
         store.add(root);
         int n = store.size();
+    
         while (store.size() != 0) {
+            
             List<Integer> result = new ArrayList<Integer>();
             for (int i = 0; i < n; i++) {
                 TreeNode node = store.poll();
@@ -56,6 +58,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
+        
         TreeNode node4 = new TreeNode(4);
         TreeNode node5 = new TreeNode(5);
         TreeNode node2 = new TreeNode(2, node4, node5);
